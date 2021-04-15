@@ -7,8 +7,23 @@
     <title>Minha Página</title>
     <script type="text/JavaScript" src="./js/main.js"></script>
 </head>
-<body>
+<body onload="load()">
         <h1>Introdução ao JavaScript</h1>
-        
+        <button type="button" onclick="obrigado()">Clique aqui</button> <!-- função sendo chamada pelo elemto onclick -->
+        <h3 id="agradecimento"></h3>
+
+        <button type="button" onclick="redirecionar()">Clique para redirecionar</button>
+
+        <p id="mouse" onmouseover="trocar()" onmouseout="voltar()">Passe o mouse aqui</p>
+
+
+        <p id="mouse2" onmouseover="foo(this)" onmouseout="boo(this)">Passe o mouse para trocar</p> <!-- Neste caso o this passa o propio elemento como parametro da função sem necessitar de um id -->
+
+        <select onchange="funChange(this)">
+            <option value="1">Valor 1</option>
+            <option value="2">Valor 2</option>
+            <option value="3">Valor 3</option>
+        </select>
+
 </body>
 </html>
